@@ -10,8 +10,9 @@ return new class extends Migration {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->timestamps();
-            $table->text('description');
+            $table->text('description')->nullable();
+            $table->timestamp('released_at')->nullable();
+            $table->timestamps(); //Crea dos columans por defecto
         });
     }
 
