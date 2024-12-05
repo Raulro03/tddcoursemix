@@ -14,10 +14,13 @@ class CourseFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(),
+            'slug' => $this->faker->slug(),
             'description' => $this->faker->paragraph(),
+
         ];
     }
-    public function released(Carbon $date = null): self
+
+    public function released(?Carbon $date = null): self
     {
         return $this->state(
             fn (array $attributes) => ['released_at' => $date ?? Carbon::now()]
@@ -25,4 +28,3 @@ class CourseFactory extends Factory
 
     }
 }
-

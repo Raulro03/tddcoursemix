@@ -2,9 +2,9 @@
 
 use App\Models\Course;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use function \Pest\Laravel\get;
-use \Illuminate\Support\Carbon;
+use Illuminate\Support\Carbon;
 
+use function Pest\Laravel\get;
 
 uses(RefreshDatabase::class);
 
@@ -12,7 +12,7 @@ it('Show courses overview', function () {
     // Arrange (Lo que necesito para hacer el test)
     $firstCourse = Course::factory()->released()->create();
     $secondCourse = Course::factory()->released()->create();
-    $thirdCourse =  Course::factory()->released()->create();
+    $thirdCourse = Course::factory()->released()->create();
 
     // Act (Accion que hara, lo que hago en el test)
     get(route('home'))
@@ -26,7 +26,6 @@ it('Show courses overview', function () {
         ]);
 
     // Assert (Afirmar, lo que me permite verificar, comprobaciones)
-
 
 });
 

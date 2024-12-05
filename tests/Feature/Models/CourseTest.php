@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\Course;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use \App\Models\Course;
 
 uses(RefreshDatabase::class);
 
@@ -12,10 +12,9 @@ it('only returns released courses for released scope', function () {
 
     //Act
     expect(Course::released()->get())
-    ->toHaveCount(1)
-    ->first()->id->toEqual(1);
+        ->toHaveCount(1)
+        ->first()->id->toEqual(1);
 
     //Assert
-
 
 });
