@@ -8,7 +8,7 @@ use function Pest\Laravel\get;
 uses(RefreshDatabase::class);
 
 it('gives back successful response for page', function () {
-    get(route('home'))
+    get(route('pages.home'))
         ->assertOk(); // = a assertResponse(200);
 
 });
@@ -18,7 +18,7 @@ it('gives back successful response for course details page', function () {
     $course = Course::factory()->released()->create();
 
     // Act (Accion que hara, lo que hago en el test)
-    get(route('course-details', $course))
+    get(route('pages.course-details', $course))
         ->assertOk();
 
     // Assert (Afirmar, lo que me permite verificar, comprobaciones)
