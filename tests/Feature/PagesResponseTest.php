@@ -15,7 +15,7 @@ it('gives back successful response for page', function () {
 
 it('gives back successful response for course details page', function () {
     // Arrange (Lo que necesito para hacer el test)
-    $course = Course::factory()->create();
+    $course = Course::factory()->released()->create();
 
     // Act (Accion que hara, lo que hago en el test)
     get(route('course-details', $course))
