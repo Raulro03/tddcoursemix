@@ -23,4 +23,10 @@ it('has videos', function () {
     //Arrange
     $course = Course::factory()->create();
     $video = Video::factory()->count(3)->create(['course_id' => $course->id]);
+
+    //Act
+    expect($course->videos)
+        ->toHaveCount(3)
+        ->each->toBeInstanceOf(Video::class);
+
 });
