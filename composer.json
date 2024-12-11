@@ -11,7 +11,8 @@
         "laravel/framework": "^9.0",
         "laravel/jetstream": "2.11",
         "laravel/sanctum": "^2.14",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -19,8 +20,8 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
-        "pestphp/pest": "^1.23",
-        "pestphp/pest-plugin-laravel": "^1.4",
+        "pestphp/pest": "^1.16",
+        "pestphp/pest-plugin-laravel": "^1.1",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0"
     },
