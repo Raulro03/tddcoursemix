@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Course;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use function Pest\Laravel\get;
@@ -23,4 +24,12 @@ it('gives back successful response for course details page', function () {
 
     // Assert (Afirmar, lo que me permite verificar, comprobaciones)
 
+});
+it('gives back successful for dashboard page', function () {
+    $user = User::factory()->create();
+
+    // Act
+    $this->actingAs($user);
+    get(route('dashboard'))
+        ->assertOk();
 });
